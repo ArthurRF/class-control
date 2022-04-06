@@ -38,7 +38,7 @@ export class AuthorizationGuard implements CanActivate {
     );
 
     try {
-      checkJWT(req, res);
+      await checkJWT(req, res);
 
       return true;
     } catch (err) {
